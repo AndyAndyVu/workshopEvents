@@ -34,14 +34,6 @@ footerEl[2].style.color = 'red';
 /*4. Brug javascript til at indsætte et favicon - f.eks. det her http://hearthstoneapi.com/favicon.ico (I know...hvorfor ville man nogensinde gøre det irl...men for øvelsens skyld) */
 
 /*5.1 Brug javascript til at gemme teksterne væk i artiklerne <p>-tags. Indsæt istedet link med "Læs mere..." */
-function myFunction() {
-    const removeP = document.querySelectorAll('article p') 
-        if (removeP.style.display === 'none') {
-            removeP.display === 'block';
-        } else {
-            removeP.display === 'none';
-        }
-}
 
 /*5.2. Sørg for at når man trykker på "Læs mere..." vises den oprindelige tekst ovenover "Læs mere..."  */
 
