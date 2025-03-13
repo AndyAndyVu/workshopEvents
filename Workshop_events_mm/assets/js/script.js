@@ -1,4 +1,31 @@
 /*1. Anvende javascript til at skifte farven i de sociale elementer til en mere passende farve (jeres vurdering) */
+h1El = document.querySelector('h1').style.color = 'blue';
+
+navEl = document.querySelectorAll ('nav a');
+navEl[0].style.color = 'purple';
+navEl[1].style.color = 'cyan';
+navEl[2].style.color = 'pink';
+navEl[3].style.color = 'green';
+navEl[4].style.color = 'blue';
+
+articleP = document.querySelectorAll('article p');
+console.log(articleP)
+articleP[0].style.color = 'purple';
+articleP[1].style.color = 'cyan';
+articleP[2].style.color = 'pink';
+articleP[3].style.color = 'green';
+articleP[4].style.color = 'blue';
+
+articleH4 = document.querySelectorAll('article h4');
+articleH4[0].style.color = 'cyan';
+articleH4[1].style.color = 'purple';
+articleH4[2].style.color = 'green';
+articleH4[3].style.color = 'blue';
+articleH4[4].style.color = 'pink';
+
+footerEl = document.querySelectorAll('.footer1 ul li');
+footerEl[2].style.color = 'red';
+
 
 /*2. Se den lidt skæve h1 i header - sørg for den ved hover "shaker"/ryster sig lidt. I bedes anvende javascript til at løse denne opgave - måske i kombination med css. Der findes endda js libraries/biblioteker I kan se på til formålet, f.eks. anime.js */
 h1El = document.querySelector("h1")
