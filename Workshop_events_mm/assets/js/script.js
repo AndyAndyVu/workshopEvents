@@ -63,7 +63,7 @@ pArrays.forEach((pEl, num) => {
 	pEl.classList.add("pHider");
 	const pbutton = document.createElement("button");
 	pbutton.textContent = "Læs mere...";
-	pbutton.dataset.target = num;
+	pbutton.dataset.target = `pEl${num}`;
 	pEl.id = `pEl${num}`;
 	pEl.after(pbutton);
 });
@@ -82,8 +82,7 @@ pArrays.forEach((pEl, num) => {
 
 document.addEventListener("click", (event) => {
 	if (event.target.matches("button[data-target]")) {
-		const targetP = event.target.dataset.target;
-		const pEl = document.getElementById(`pEl${targetP}`);
+		const pEl = document.querySelector(`#${event.target.dataset.target}`);
 		if (pEl) {
 			pEl.classList.toggle("pHider");
 			event.target.textContent = pEl.classList.contains("pHider")
