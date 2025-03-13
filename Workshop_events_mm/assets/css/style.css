@@ -169,3 +169,13 @@ footer .container h6 {
 .pHider {
 	display: none;
 }
+
+@keyframes h1Shake {
+  0% {transform: rotate(-180);}
+  25% {transform: rotate(90);}
+  50% {transform: rotate(0);}
+  100% {transform: rotate(-180);}
+}
+.h1HoverShake{
+animation: h1Shake 1s ease-in-out infinite;
+}
