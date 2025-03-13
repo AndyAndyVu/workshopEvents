@@ -166,6 +166,10 @@ footer .container h6 {
   background: hsl(34, 36%, 53%);
 }
 
+.pHider {
+	display: none;
+}
+
 @keyframes h1Shake {
   0% {transform: rotate(-180);}
   25% {transform: rotate(90);}
