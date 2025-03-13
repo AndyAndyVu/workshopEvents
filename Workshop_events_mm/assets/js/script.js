@@ -1,8 +1,13 @@
 /*1. Anvende javascript til at skifte farven i de sociale elementer til en mere passende farve (jeres vurdering) */
 
 /*2. Se den lidt skæve h1 i header - sørg for den ved hover "shaker"/ryster sig lidt. I bedes anvende javascript til at løse denne opgave - måske i kombination med css. Der findes endda js libraries/biblioteker I kan se på til formålet, f.eks. anime.js */
-
-
+h1El = document.querySelector("h1")
+h1El.addEventListener("mouseover", () => {
+    h1El.classList.add("h1HoverShake")
+})
+h1El.addEventListener("mouseleave", () => {
+    h1El.classList.remove("h1HoverShake")
+})
 
 /*3. Brug javascript til at skifte billedet ud i .bigPicture-boksen, brug dette eller noget helt andet: https://cdn.pixabay.com/photo/2017/09/28/13/18/amusement-2795490_960_720.jpg */
 
