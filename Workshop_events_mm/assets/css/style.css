@@ -164,4 +164,6 @@ footer .container h6 {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(34, 36%, 53%);
+.pHider {
+	display: none;
 }

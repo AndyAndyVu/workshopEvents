@@ -14,6 +14,50 @@ elNewFav.setAttribute("href", "http://hearthstoneapi.com/favicon.ico");
 document.head.append(elNewFav);
 
 /*5.1 Brug javascript til at gemme teksterne væk i artiklerne <p>-tags. Indsæt istedet link med "Læs mere..." */
+/* let pArrays = document.querySelectorAll("article p");
+for (let i = 0; i < pArrays.length; i++) {
+	pArrays[i].id = `pEl${i}`;
+	pArrays[i].classList.add("pHider");
+	const pButton = document.createElement("button");
+	pButton.id = `pButton${i}`;
+	pButton.textContent = "Læs mere...";
+	pArrays[i].after(pButton);
+}*/
+
+const pArrays = document.querySelectorAll("article p");
+pArrays.forEach((pEl, num) => {
+	pEl.classList.add("pHider");
+	const pbutton = document.createElement("button");
+	pbutton.textContent = "Læs mere...";
+	pbutton.dataset.target = num;
+	pEl.id = `pEl${num}`;
+	pEl.after(pbutton);
+});
+
+/*const elButtonListener = document.addEventListener("click", (event) => {
+	if (event.target && event.target.id.match("pButton") == "pButton") {
+		if (event.target.textContent == "Læs mere...")
+			event.target.textContent = "Læs mindre...";
+		else event.target.textContent = "Læs mere...";
+		let targetP = event.target.id;
+		targetP = `#pEl${targetP.slice(7)}`;
+		const elToTarget = document.querySelector(targetP);
+		elToTarget.classList.toggle("pHider");
+	}
+}); */
+
+document.addEventListener("click", (event) => {
+	if (event.target.matches("button[data-target]")) {
+		const targetP = event.target.dataset.target;
+		const pEl = document.getElementById(`pEl${targetP}`);
+		if (pEl) {
+			pEl.classList.toggle("pHider");
+			event.target.textContent = pEl.classList.contains("pHider")
+				? "Læs mere..."
+				: "Læs mindre...";
+		}
+	}
+});
 
 /*5.2. Sørg for at når man trykker på "Læs mere..." vises den oprindelige tekst ovenover "Læs mere..."  */
 
