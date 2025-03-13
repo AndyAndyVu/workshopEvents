@@ -22,6 +22,7 @@ document.head.append(elNewFav);
 /*6. Som I måske har lagt mærke til, er der en .crazyPopup box som står udenfor body (se i css...prøv f.eks. at ændre property "right" til value -200 og 0). Opgaven er at den nu "popper up" når personer har scrollet 100px ned og forsvinde igen når de scroller op under 100px igen  - lookie: https://drive.google.com/file/d/10aSqzcL3br8DU5AhggE54Pal0Z3s-x5y/view */
 const elHeader = document.querySelector("header");
 const elCrazyPopup = document.querySelector(".crazyPopup");
+/*Kunne havde brugt en document.addEventListener("scroll"---, men den larmer ved AL scrolling*/
 const seeCrazyPopup = new IntersectionObserver(
 	(entries) => {
 		entries.forEach((entry) => {
