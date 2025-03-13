@@ -2,7 +2,7 @@
 
 /*2. Se den lidt skæve h1 i header - sørg for den ved hover "shaker"/ryster sig lidt. I bedes anvende javascript til at løse denne opgave - måske i kombination med css. Der findes endda js libraries/biblioteker I kan se på til formålet, f.eks. anime.js */
 h1El = document.querySelector("h1")
-h1El.addEventListener("mouseover", () => {
+h1El.addEventListener("mouseenter", () => {
     h1El.classList.add("h1HoverShake")
 })
 h1El.addEventListener("mouseleave", () => {
